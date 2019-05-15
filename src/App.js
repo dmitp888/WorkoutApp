@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-// import {  Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import About from "./pages/About";
@@ -10,6 +10,7 @@ import Wrapper from "./components/Wrapper";
 import Signup from './components/sign-up'
 import LoginForm from './components/login-form'
 import axios from 'axios'
+import "./style.css";
 
 class App extends Component {
   constructor() {
@@ -28,7 +29,7 @@ class App extends Component {
     this.getUser()
   }
 
-  updateUser (userObject) {
+  updateUser(userObject) {
     this.setState(userObject)
   }
 
@@ -52,45 +53,25 @@ class App extends Component {
       }
     })
   }
-
   render() {
     return (
       <Router>
-      <div>
-        <Navbar />
+        <div>
         <Wrapper>
-          <Route exact path="/" component={About} />
-          <Route exact path="/about" component={About} />
-          <Route exact path="/home" component={Home} />
-          <Route exact path="/workout" component={Workout} />
-        </Wrapper> 
-         <Footer />
-      </div>
-      <div className="App">
         <Navbar updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
-        {/* greet user if logged in: */}
-        {this.state.loggedIn &&
-          <p>Join the party, {this.state.username}!</p>
-        }
-        {/* Routes to different components */}
-        <Route
-          exact path="/"
-          component={Home} />
-        <Route
-          path="/login"
-          render={() =>
-            <LoginForm
-              updateUser={this.updateUser}
-            />}
-        />
-        <Route
-          path="/signup"
-          render={() =>
-            <Signup/>}
-        />
-      </div>
+            <Route exact path="/" component={About} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/home" component={Home} />
+            <Route exact path="/workout" component={Workout} />
+            <Route path="/login" render={() => <LoginForm updateUser={this.updateUser} />} />
+            {/* greet user if logged in: */}
+            {this.state.loggedIn && <p>Join the party, {this.state.username}!</p>
+            }
+            <Route path="/signup" render={() => <Signup />} />
+          </Wrapper>
+          <Footer />
+        </div>
       </Router>
-
     );
   }
 }
