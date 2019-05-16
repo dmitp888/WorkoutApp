@@ -6,7 +6,8 @@ const dbConnection = require('./database')
 const MongoStore = require('connect-mongo')(session)
 const passport = require('./passport');
 const app = express()
-const PORT = 8080
+const mongoose = require("mongoose");
+const PORT = process.env.PORT || 3000
 // Route requires
 const user = require('./routes/user')
 
@@ -18,6 +19,12 @@ app.use(
 	})
 )
 app.use(bodyParser.json())
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+// Serve up static assets (usually on heroku)
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
 
 // Sessions
 app.use(
@@ -36,6 +43,8 @@ app.use(passport.session()) // calls the deserializeUser
 
 // Routes
 app.use('/user', user)
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist");
+
 
 // Starting Server 
 app.listen(PORT, () => {
