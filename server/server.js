@@ -7,7 +7,7 @@ const MongoStore = require('connect-mongo')(session)
 const passport = require('./passport');
 const app = express()
 const mongoose = require("mongoose");
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 3001;
 // Route requires
 const user = require('./routes/user')
 
@@ -43,7 +43,7 @@ app.use(passport.session()) // calls the deserializeUser
 
 // Routes
 app.use('/user', user)
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/fitness");
 
 
 // Starting Server 

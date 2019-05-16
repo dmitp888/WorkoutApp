@@ -5,7 +5,8 @@ const db = require("../models");
 
 mongoose.connect(
   process.env.MONGODB_URI ||
-  "mongodb://localhost/fitness"
+  "mongodb://localhost/fitness",
+  {useNewUrlParser: true}
 );
 
 const fitSeed = [
@@ -13,13 +14,13 @@ const fitSeed = [
     musclegroup: "shoulders",
     exersizename: "military press",
     instructions: "stand and breathe",
-    img: "img",
+    img: "img"
   }
 ];
 
-db.Fitness
+db.Exersize
   .remove({})
-  .then(() => db.Fitness.collection.insertMany(fitSeed))
+  .then(() => db.Exersize.collection.insertMany(fitSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);
