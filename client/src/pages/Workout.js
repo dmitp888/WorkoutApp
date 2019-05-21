@@ -1,26 +1,17 @@
 import React, { Component } from "react";
 // import Jumbotron from "../components/Jumbotron";
-import API from "../utils/API";
 // import DeleteBtn from "../components/DeleteBtn";
 // import { Col, Row, Container } from "../components/Grid";
 // import { List, ListItem } from "../components/List";
 // import { Input, TextArea, FormBtn } from "../components/Form";
+import exersizes from "../components/exersizes.json";
 
 class Workout extends Component {
   state = {
-    exersizes: [],
-    musclegroup:""
+    exersizes
+    
   };
 
-  componentDidMount() {
-    this.loadBooks();
-  }
-
-  loadBooks = () => {
-    API.getBooks()
-      .then(res => this.setState({ exersizes: res.data, musclegroup:""}))
-      .catch(err => console.log(err));
-  };
   render() {
     return (
      <div>

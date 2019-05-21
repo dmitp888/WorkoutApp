@@ -11,7 +11,6 @@ const PORT = process.env.PORT || 3001;
 
 // Route requires
 const user = require('./routes/user')
-const routes = require("./routes");
 // MIDDLEWARE
 app.use(morgan('dev'))
 app.use(
@@ -46,7 +45,6 @@ app.use(passport.session()) // calls the deserializeUser
 app.use('/user', user)
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/fitness");
 // Add routes, both API and view
-app.use(routes);
 
 // Starting Server 
 app.listen(PORT, () => {
