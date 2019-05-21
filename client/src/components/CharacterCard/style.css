@@ -1,0 +1,10 @@
+ .card {
+  height: 649px;
+  width: 456px;
+  }  
+  .card > img{
+
+    height: 649px;
+  width: 456px;
+  margin-left: 100%;
+  }
