@@ -5,6 +5,7 @@ import React, { Component } from "react";
 // import { List, ListItem } from "../components/List";
 // import { Input, TextArea, FormBtn } from "../components/Form";
 import exersizes from "../components/exersizes.json";
+import CharacterCard from "../components/CharacterCard";
 
 class Workout extends Component {
   state = {
@@ -15,10 +16,10 @@ class Workout extends Component {
   render() {
     return (
      <div>
-{this.state.exersizes.map(exersize=>
-<h1>{exersize.musclegroup}</h1>
-
-
+{/* // {this.state.exersizes.map(exersize=> */}
+<CharacterCard>
+{/* <h1>{exersize.musclegroup}</h1> */}
+</CharacterCard>
 
 )}      
        
