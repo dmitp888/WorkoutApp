@@ -1,10 +1,11 @@
 import React from "react";
+import Questions from "../components/Questions";
+
+
 
 function Home() {
   return (
-    <div>
-      Something to display
-        </div>
+    <Questions/>
   );
 }
 

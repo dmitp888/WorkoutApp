@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import { Redirect } from 'react-router-dom';
-import { Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import "./style.css";
 import axios from 'axios'
 
@@ -43,17 +42,8 @@ class Navbar extends Component {
               <section className="navbar-section">
                 <Link to="#" className="btn btn-link text-secondary" onClick={this.logout}>
                   <span className="text-secondary">logout</span></Link>
-              </section>
-            ) : (
-                <section className="navbar-section">
                   <Link to="/home" className="btn btn-link text-secondary">
                     <span className="text-secondary">home</span>
-                  </Link>
-                  <Link to="/login" className="btn btn-link text-secondary">
-                    <span className="text-secondary">login</span>
-                  </Link>
-                  <Link to="/signup" className="btn btn-link">
-                    <span className="text-secondary">sign up</span>
                   </Link>
                   <Link to="/about" className="btn btn-link text-secondary">
                     <span className="text-secondary">about</span>
@@ -61,6 +51,20 @@ class Navbar extends Component {
                   <Link to="/workout" className="btn btn-link text-secondary">
                     <span className="text-secondary">workout</span>
                   </Link>
+
+              </section>
+            ) : (
+                <section className="navbar-section">
+                  <Link to="/login" className="btn btn-link text-secondary">
+                    <span className="text-secondary">login</span>
+                  </Link>
+                  <Link to="/signup" className="btn btn-link">
+                    <span className="text-secondary">sign up</span>
+                  </Link>
+                  <Link to="/about" className="btn btn-link">
+                    <span className="text-secondary">about</span>
+                  </Link>
+
                 </section>
               )}
           </div>
