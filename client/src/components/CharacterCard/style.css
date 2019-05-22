@@ -18,8 +18,9 @@
     pointer-events: none;
     z-index: 1000;
 }
-.container {
+.container > .img {
   position: relative;
-scale: 36%
+  margin-left: 11%;
+  margin-top: 20%;
 }
 

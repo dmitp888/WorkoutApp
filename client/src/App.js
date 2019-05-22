@@ -9,7 +9,12 @@ import Workout from "./pages/Workout";
 import Wrapper from "./components/Wrapper";
 import Signup from './components/sign-up'
 import LoginForm from './components/login-form'
-import axios from 'axios'
+import axios from 'axios';
+import Chest from './pages/MuscleGroups/Chest'
+import Biceps from './pages/MuscleGroups/Biceps'
+import Shoulders from './pages/MuscleGroups/Shoulders'
+import Abs from './pages/MuscleGroups/Abs'
+import Quads from './pages/MuscleGroups/Quads'
 import "./style.css";
 
 class App extends Component {
@@ -68,6 +73,12 @@ class App extends Component {
             {this.state.loggedIn && <p>Join the party, {this.state.username}!</p>
             }
             <Route path="/signup" render={() => <Signup />} />
+            <Route exact path="/chest" component={Chest} />
+        <Route exact path="/biceps" component={Biceps} />
+        <Route exact path="/shoulders" component={Shoulders} />
+        <Route exact path="/abs" component={Abs} />
+        <Route exact path="/quads" component={Quads} />
+
           </Wrapper>
           <Footer />
         </div>
