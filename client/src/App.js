@@ -62,23 +62,21 @@ class App extends Component {
     return (
       <Router>
         <div>
-        <Wrapper>
-        <Navbar updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
+          <Wrapper>
+            {/* greet user if logged in: */}
+            {this.state.loggedIn && <p>Welcome, {this.state.username}!</p>}
+            <Navbar updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
             <Route exact path="/" component={About} />
             <Route exact path="/about" component={About} />
             <Route exact path="/home" component={Home} />
             <Route exact path="/workout" component={Workout} />
             <Route path="/login" render={() => <LoginForm updateUser={this.updateUser} />} />
-            {/* greet user if logged in: */}
-            {this.state.loggedIn && <p>Join the party, {this.state.username}!</p>
-            }
             <Route path="/signup" render={() => <Signup />} />
             <Route exact path="/chest" component={Chest} />
-        <Route exact path="/biceps" component={Biceps} />
-        <Route exact path="/shoulders" component={Shoulders} />
-        <Route exact path="/abs" component={Abs} />
-        <Route exact path="/quads" component={Quads} />
-
+            <Route exact path="/biceps" component={Biceps} />
+            <Route exact path="/shoulders" component={Shoulders} />
+            <Route exact path="/abs" component={Abs} />
+            <Route exact path="/quads" component={Quads} />
           </Wrapper>
           <Footer />
         </div>

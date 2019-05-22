@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import exersizes from "../components/exersizes.json";
 import CharacterCard from "../components/CharacterCard";
-
+ import "../../src/style.css"
 class Workout extends Component {
   state = {
     exersizes,

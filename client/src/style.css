@@ -8,5 +8,8 @@ color: aliceblue
 .navigation{
   height: 100%;
 }
-
+.figure{
+  position: relative;
+  margin-left: 30%;
+}
 
