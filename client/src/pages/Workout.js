@@ -18,14 +18,13 @@ class Workout extends Component {
      <div>
 {/* // {this.state.exersizes.map(exersize=> */}
 <CharacterCard>
+ 
 {/* <h1>{exersize.musclegroup}</h1> */}
 </CharacterCard>
-
-)}      
-       
+   
      </div>
     );
-  }
+    }
 }
 
 
