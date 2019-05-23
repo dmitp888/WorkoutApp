@@ -1,9 +1,9 @@
-[
+const exersise = [
     {
       "musclegroup": "chest",
       "exersizename": "bench press",
       "instructions": "Lying face up on bench, grab bar from rack with wide overhand grip (slightly wider than shoulders), lower bar to upper middle of chest and then raise until arms are nearly locked.",
-      "img": "client/src/images/chest-bench-press.gif"
+      "img_url": require("./images/chest-bench-press.gif")
     },
     {
       "musclegroup": "chest",
@@ -30,4 +30,4 @@
       "img": ""
     }
   ]
-  
+  module.exports = exersise

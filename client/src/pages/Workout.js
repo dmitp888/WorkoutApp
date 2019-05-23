@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import exersizes from "../components/exersizes.json";
+import exersizes from "../components/exersizes.js";
 import CharacterCard from "../components/CharacterCard";
  import "../../src/style.css"
 class Workout extends Component {

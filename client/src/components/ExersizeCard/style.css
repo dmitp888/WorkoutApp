@@ -1,0 +1,14 @@
+.card {
+font: black;
+  text-align: left;
+  height: justify;
+  }
+  
+  .card > .img-container {
+    height: inherit;
+    overflow: hidden;
+  }
+  .card > .img-container > img {
+    width: 100%;
+    height: inherit;
+  }
