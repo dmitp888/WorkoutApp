@@ -9,21 +9,16 @@ class Shoulders extends Component {
   state = {
     exersizes
   };
-
-
   render() {
     return (
       <div >
-        {this.state.exersizes.map(exersize => (
-          <ExersizeCard
-            // key={exersize.exersizename}
-            // musclegroup={exersize.musclegroup}
-            // exersizename={exersize.exersizename}
-            // instructions={exersize.instructions}
-            // img={exersize.img}
-          >
-          <h3>{exersize.exersizename}</h3>
-          <p>{exersize.instructions}</p>
+        {/* Gettting particular muscle group using filter method and then rendering needeed info to the page */}
+        {this.state.exersizes.filter(exersize =>
+        exersize.musclegroup==="shoulders").map(exersize => (
+          <ExersizeCard>
+          <p>{exersize.exersizename}</p>
+          <p>instructions</p>
+          {exersize.instructions}
           <img src={exersize.img} alt={exersize.exersizename} />
           </ExersizeCard>
         )
