@@ -70,7 +70,7 @@ class App extends Component {
             <Route exact path="/workout" component={Workout} />
             <Route path="/login" render={() => <LoginForm updateUser={this.updateUser} />} />
             <Route path="/signup" render={() => <Signup />} />
-            <Route exact path="/chest" component={Chest} />
+            <Route  path="/chest" component={Chest} />
             <Route exact path="/biceps" component={Biceps} />
             <Route exact path="/shoulders" component={Shoulders} />
             <Route exact path="/abs" component={Abs} />
