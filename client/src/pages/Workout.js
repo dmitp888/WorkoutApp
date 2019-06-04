@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import exersizes from "../components/exersizes.js";
-import CharacterCard from "../components/CharacterCard";
+import FigureCard from "../components/FigureCard";
  import "../../src/style.css"
 class Workout extends Component {
   state = {
@@ -12,7 +12,7 @@ class Workout extends Component {
     return (
      <div className="figure">
 
-<CharacterCard/>
+<FigureCard/>
    
      </div>
     );

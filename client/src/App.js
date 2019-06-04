@@ -1,20 +1,19 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-// import { Link } from 'react-router-dom'
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
 import About from "./pages/About";
 import Home from "./pages/Home";
 import Workout from "./pages/Workout";
 import Wrapper from "./components/Wrapper";
-import Signup from './components/sign-up'
-import LoginForm from './components/login-form'
+import Signup from './components/sign-up';
+import Footer from "./components/Footer";
+import LoginForm from './components/login-form';
 import axios from 'axios';
-import Chest from './pages/MuscleGroups/Chest'
-import Biceps from './pages/MuscleGroups/Biceps'
-import Shoulders from './pages/MuscleGroups/Shoulders'
-import Abs from './pages/MuscleGroups/Abs'
-import Quads from './pages/MuscleGroups/Quads'
+import Chest from './pages/MuscleGroups/Chest';
+import Biceps from './pages/MuscleGroups/Biceps';
+import Shoulders from './pages/MuscleGroups/Shoulders';
+import Abs from './pages/MuscleGroups/Abs';
+import Quads from './pages/MuscleGroups/Quads';
 import "./style.css";
 
 class App extends Component {
@@ -61,11 +60,10 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div>
           <Wrapper>
             {/* greet user if logged in: */}
-            {this.state.loggedIn && <p>Welcome, {this.state.username}!</p>}
             <Navbar updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
+            {this.state.loggedIn && <p>Welcome, {this.state.username}!</p>}
             <Route exact path="/" component={About} />
             <Route exact path="/about" component={About} />
             <Route exact path="/home" component={Home} />
@@ -79,7 +77,6 @@ class App extends Component {
             <Route exact path="/quads" component={Quads} />
           </Wrapper>
           <Footer />
-        </div>
       </Router>
     );
   }

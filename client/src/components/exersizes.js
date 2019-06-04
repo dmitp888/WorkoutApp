@@ -8,7 +8,7 @@ const exersise = [
   {
     "musclegroup": "chest",
     "exersizename": "Push ups",
-    "instructions": "sFingers going forward with palms on the floor, slightly wider than shoulder width and directly underneath the shoulders, toes on floor and with your body balanced in this way, lower your body until the chest nearly touches the floor and then push yourself back up again until arms are nearly locked.",
+    "instructions": "Fingers going forward with palms on the floor, slightly wider than shoulder width and directly underneath the shoulders, toes on floor and with your body balanced in this way, lower your body until the chest nearly touches the floor and then push yourself back up again until arms are nearly locked.",
     "img":require("../components/images/chest-push-ups.gif")
   },
   {

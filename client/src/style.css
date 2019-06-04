@@ -1,9 +1,21 @@
 html,
 body,
-header,
+/* header, */
 .view {
-  height: 100%;
+  min-height: 100%;
 color: aliceblue
+}
+#nav-container {
+  background: black;
+  margin-bottom:20px;
+  margin-top:0;
+font: white;
+}
+#nav-container a {
+ margin: 5px;
+  color: blueviolet;  
+  font: blue;;
+  background-color: aquamarine
 }
 .navigation{
   height: 100%;
@@ -12,4 +24,6 @@ color: aliceblue
   position: relative;
   margin-left: 30%;
 }
-
+.SignupForm,#login{
+  position: center;
+}

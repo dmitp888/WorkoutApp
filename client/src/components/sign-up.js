@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import "../../src/style.css"
 
 class Signup extends Component {
 	constructor() {
@@ -49,10 +50,11 @@ class Signup extends Component {
 render() {
 	return (
 		<div className="SignupForm">
-			<h4>Sign up</h4>
 			<form className="form-horizontal">
 				<div className="form-group">
 					<div className="col-1 col-ml-auto">
+					<h4>Sign up</h4>
+
 						<label className="form-label" htmlFor="username">Username</label>
 					</div>
 					<div className="col-3 col-mr-auto">
@@ -82,7 +84,7 @@ render() {
 				</div>
 				<div className="form-group ">
 					<div className="col-7"></div>
-					<button
+					<button style={{left:70}}
 						className="btn btn-primary col-1 col-mr-auto"
 						onClick={this.handleSubmit}
 						type="submit"

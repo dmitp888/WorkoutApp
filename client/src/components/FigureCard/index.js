@@ -1,6 +1,5 @@
 import React from "react";
 import ImageMapper from 'react-image-mapper';
-// import figure from "../images/figure.jpg"
 import figure from "../images/figure3.png"
 
 const MAP = {
@@ -18,7 +17,7 @@ const MAP = {
 };
 
 
-function CharacterCard(props) {
+function FigureCard(props) {
   return (
     <div className="container" >
 
@@ -28,4 +27,4 @@ function CharacterCard(props) {
     </div>
   );
 }
-export default CharacterCard;
+export default FigureCard;
