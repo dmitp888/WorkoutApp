@@ -5,7 +5,7 @@ import figure from "../images/figure3.png"
 const MAP = {
   name: "my-map",
     areas: [
-      { name:"abs", href: "/abs", coords:[155,184,147,200,149,256,179,288,204,288,225,261,236,250,239,187,195,176], shape:"poly", preFillColor: "transparent", fillColor: "blue" },
+      { name:"abs", href:"/abs", coords:[155,184,147,200,149,256,179,288,204,288,225,261,236,250,239,187,195,176], shape:"poly", preFillColor: "transparent", fillColor: "blue" },
       {name:"quads",href:"/quads", coords:[225,275,241,273,250,352,241,403,227,418,213,405,203,372,200,324,212,294], shape:"poly", preFillColor: "transparent", fillColor: "blue" },
       { name:"quads",href:"/quads",  coords:[160,275,187,322,175,409,158,420,145,403,136,364,139,317,144,284], shape:"poly", preFillColor: "transparent", fillColor: "blue" },
       { name:"chest", href:"/chest", coords:[153,119,195,123,232,120,252,158,244,165,216,170,197,163,172,171,153,171,138,161,141,142], shape:"poly", preFillColor: "transparent", fillColor: "blue" },
