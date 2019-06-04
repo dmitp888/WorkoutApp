@@ -1,6 +1,12 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ImageMapper from 'react-image-mapper';
 import figure from "../images/figure3.png"
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Chest from '../../pages/Chest';
+import Biceps from '../../pages/Biceps';
+import Shoulders from '../../pages/Shoulders';
+import Abs from '../../pages/Abs';
+import Quads from '../../pages/Quads';
 
 const MAP = {
   name: "my-map",
@@ -17,14 +23,35 @@ const MAP = {
 };
 
 
-function FigureCard(props) {
+class FigureCard extends Component {
+render(){
   return (
     <div className="container" >
 
-    <ImageMapper src={figure} map={MAP} 
-
-     />
+    <ImageMapper src={figure} map={MAP}  />
+    <Router>
+          <Route exact path="/chest" component={Chest} />
+          <Route exact path="/biceps" component={Biceps} />
+          <Route exact path="/shoulders" component={Shoulders} />
+          <Route exact path="/abs" component={Abs} />
+          <Route exact path="/quads" component={Quads} />
+    </Router>
     </div>
-  );
-}
+  )
+
+
+  }
+}   
+    
+  
+
+//   return (
+//     <div className="container" >
+
+//     <ImageMapper src={figure} map={MAP} 
+
+//      />
+//     </div>
+//   );
+// }
 export default FigureCard;
