@@ -39,6 +39,8 @@ function Questions() {
           </Form.Control>
         </Form.Group>
       </Form>
+      <button style={{float:"right",right:10}}  className="btn btn-primary col-1 col-mr-auto"  type="submit">Submit</button>              
+
     </div>
   );
 }

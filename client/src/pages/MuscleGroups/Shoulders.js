@@ -12,24 +12,22 @@ class Shoulders extends Component {
   render() {
     return (
       <div className="exersizes">
-                    <h1> Shoulders  </h1>
-
+        <h1> Shoulders  </h1>
         {/* Gettting particular muscle group using filter method and then rendering needeed info to the page */}
         {this.state.exersizes.filter(exersize =>
           exersize.musclegroup === "shoulders").map(exersize => (
-            <ExersizeCard>              
+            <ExersizeCard>
               <h2>{exersize.exersizename}</h2>
               <h5>instructions</h5>
               {exersize.instructions}
-              <div  className="gifs">
-                <img style={{height: 200}} src={exersize.img} alt={exersize.exersizename}  />
+              <div className="gifs">
+                <img style={{ height: 200 }} src={exersize.img} alt={exersize.exersizename} />
               </div>
               <div>
-              <button style={{left:1200,bottom:20}} className="btn btn-primary col-1 col-mr-auto" onClick={this.handleSubmit} type="submit">Add exersize</button>              </div>
+                <button style={{ left: 1200, bottom: 20 }} className="btn btn-primary col-1 col-mr-auto" onClick={this.handleSubmit} type="submit">Add exersize</button>              </div>
             </ExersizeCard>
           )
           )}
-
       </div>
     )
   }

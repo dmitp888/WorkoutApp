@@ -34,6 +34,24 @@ const exersise = [
     "exersizename": "Barbell biceps curls",
     "instructions": "Standing, grasp barbell with shoulder width grip and, with elbows at your sides, raise until forearms are near upper arms and then lower until arms are again nearly fully extended but avoid locking out the elbows at the bottom of the exercise.    ",
     "img":require("../components/images/biseps-curls.gif")
+  },
+  {
+    "musclegroup": "quads",
+    "exersizename": "Leg press",
+    "instructions": "Using a leg press machine, sit down on the machine and place your legs on the platform directly in front of you at a medium (shoulder width) foot stance.Lower the safety bars holding the weighted platform in place and press the platform all the way up until your legs are fully extended in front of you.As you inhale, slowly lower the platform until your upper and lower legs make a 90-degree angle.",
+    "img":require("../components/images/quads-legpress.gif")
+  },
+  {
+    "musclegroup": "quads",
+    "exersizename": "Barbell Full Squat",
+    "instructions": "Squat down by bending hips back while allowing knees to bend forward, keeping back straight and knees pointed same direction as feet. Descend until knees and hips are fully bent. Extend knees and hips until legs are straight. Return and repeat.",
+    "img":require("../components/images/quads-full.gif")
+  },
+  {
+    "musclegroup": "abs",
+    "exersizename": "Decline crunches",
+    "instructions": "Sit on a 25-degree decline bench and place your feet under the holding pad and both hands on your abdominals. Keeping your abs tight at all times, lean back to a 45-degree angle (never go all the way, as that can endanger your lower back). Crunch forward toward your knees, rolling your abdominals together, and tighten them in the top position. Release slightly to the 45-degree angle and repeat.",
+    "img":require("../components/images/abs-decline.gif")
   }
 ]
 module.exports = exersise
