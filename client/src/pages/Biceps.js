@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import exersizes from "../../components/exersizes.js";
-import ExersizeCard from "../../components/ExersizeCard"
-import "../MuscleGroups/style.css"
+import exersizes from "../components/exersizes.js";
+import ExersizeCard from "../components/ExersizeCard"
+import "../../src/style.css"
 
 
-class Shoulders extends Component {
+class Biceps extends Component {
 
   state = {
     exersizes
@@ -12,10 +12,10 @@ class Shoulders extends Component {
   render() {
     return (
       <div className="exersizes">
-        <h1> Shoulders  </h1>
+        <h1> Biceps  </h1>
         {/* Gettting particular muscle group using filter method and then rendering needeed info to the page */}
         {this.state.exersizes.filter(exersize =>
-          exersize.musclegroup === "shoulders").map(exersize => (
+          exersize.musclegroup === "biceps").map(exersize => (
             <ExersizeCard>
               <h2>{exersize.exersizename}</h2>
               <h5>instructions</h5>
@@ -34,4 +34,4 @@ class Shoulders extends Component {
 
 };
 
-export default Shoulders;
+export default Biceps;

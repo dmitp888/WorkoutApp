@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import exersizes from "../../components/exersizes.js";
-import ExersizeCard from "../../components/ExersizeCard"
-import "../MuscleGroups/style.css"
+import exersizes from "../components/exersizes.js";
+import ExersizeCard from "../components/ExersizeCard"
+import "../../src/style.css"
 
 
 class Chest extends Component {

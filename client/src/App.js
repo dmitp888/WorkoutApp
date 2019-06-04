@@ -9,11 +9,11 @@ import Signup from './components/sign-up';
 import Footer from "./components/Footer";
 import LoginForm from './components/login-form';
 import axios from 'axios';
-import Chest from './pages/MuscleGroups/Chest';
-import Biceps from './pages/MuscleGroups/Biceps';
-import Shoulders from './pages/MuscleGroups/Shoulders';
-import Abs from './pages/MuscleGroups/Abs';
-import Quads from './pages/MuscleGroups/Quads';
+import Chest from './pages/Chest';
+import Biceps from './pages/Biceps';
+import Shoulders from './pages/Shoulders';
+import Abs from './pages/Abs';
+import Quads from './pages/Quads';
 import "./style.css";
 
 class App extends Component {
