@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import exersizes from "../components/exersizes.js";
+import exersizes from "../components/exersizes.json";
 import ExersizeCard from "../components/ExersizeCard"
 import "../../src/style.css"
 
