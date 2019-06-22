@@ -27,16 +27,9 @@ class FigureCard extends Component {
 render(){
   return (
     <div className="container" >
-    <Router>
-    <Route exact path="/chest1" component={Chest} />
+   
 
     <ImageMapper src={figure} map={MAP}  />
-          <Route exact path="/chest" component={Chest} />
-          <Route exact path="/biceps" component={Biceps} />
-          <Route exact path="/shoulders" component={Shoulders} />
-          <Route exact path="/abs" component={Abs} />
-          <Route exact path="/quads" component={Quads} />
-    </Router>
     </div>
   )
 
