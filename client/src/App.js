@@ -68,7 +68,7 @@ class App extends Component {
             <Route exact path="/about" component={About} />
             <Route exact path="/home" component={Home} />
             <Route exact path="/workout" component={Workout} />
-            <Route  exact path="/chest" component={Chest} />
+            <Route  exact path="/chest1" component={Chest} />
             <Route exact path="/biceps" component={Biceps} />
             <Route exact path="/shoulders" component={Shoulders} />
             <Route exact path="/abs" component={Abs} />
