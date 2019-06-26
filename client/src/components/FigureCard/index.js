@@ -30,6 +30,7 @@ render(){
    
 
     <ImageMapper src={figure} map={MAP}  />
+    
     </div>
   )
 

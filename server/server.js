@@ -8,7 +8,7 @@ const passport = require('./passport');
 const app = express()
 const mongoose = require("mongoose");
 const PORT = process.env.PORT || 3001;
-
+const path = require("path");
 // Route requires
 const user = require('./routes/user')
 // MIDDLEWARE
@@ -45,6 +45,18 @@ app.use(passport.session()) // calls the deserializeUser
 app.use('/user', user)
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/fitness");
 // Add routes, both API and view
+
+app.get('/*', function(req, res) {
+	res.sendFile(path.join(__dirname, '../client/public/index.html'), function(err) {
+	  if (err) {
+		res.status(500).send(err)
+	  }
+	})
+  })
+
+
+
+
 
 // Starting Server 
 app.listen(PORT, () => {
