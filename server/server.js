@@ -9,6 +9,11 @@ const app = express()
 const mongoose = require("mongoose");
 const PORT = process.env.PORT || 3001;
 const path = require("path");
+const router = require("express").Router();
+
+router.use(function (req, res) {
+	res.sendFile(path.join(__dirname, "../client/public/index.html"));
+   });
 // Route requires
 const user = require('./routes/user')
 // MIDDLEWARE
@@ -47,7 +52,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/fitness");
 // Add routes, both API and view
 
 app.get('/*', function(req, res) {
-	res.sendFile(path.join(__dirname, 'client/public/index.html'), function(err) {
+	res.sendFile(path.join(__dirname, './client/public/index.html'), function(err) {
 	  if (err) {
 		res.status(500).send(err)
 	  }
